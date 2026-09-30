@@ -1,0 +1,24 @@
+info:
+  name: Регистрация
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{URL}}/auth/register"
+  body:
+    type: json
+    data: |-
+      {
+        "username": "user box",
+        "password": "1234567",
+        "email": "test@example.com"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
